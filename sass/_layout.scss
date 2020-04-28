@@ -1,0 +1,129 @@
+.header {
+
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(#999, 0.5), rgba(#111, 0.5)), url(../img/mountain.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+      content: "";
+      color: black;
+      background-color: #5B54FC;
+      opacity: .7;
+      clip-path: polygon(75% 0, 100% 0%, 100% 100%, 22% 100%);
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+
+
+  &__box {
+      width: 70%;
+      height: 70%;
+      padding: 4rem;
+      position: relative;
+      background-color: #eee;
+      z-index: 5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+  }
+
+  &__information {
+
+  }
+
+  &__image {
+      width: 40%;
+      height: auto;
+      align-self: center;
+      border-radius: 50%;
+      margin-right: 6rem;
+      object-fit: cover;
+      // box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+      // transform: translate(-30%, -30%);
+  }
+
+  &__text {
+      animation: moveInTop 2.5s;
+      letter-spacing: .5rem;
+      text-transform: uppercase;
+      font-size: 3.5rem;
+      color: #5B54FC;
+      margin-bottom: 5rem;
+
+      &--black {
+        color: #555;
+        font-size: 2.5rem;
+      }
+  }
+
+  &__photo {
+      width: 50rem;
+  }
+}
+
+
+.btn {
+    animation: moveInBottom 2.5s;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    background-color: #5B54FC;
+    color: #eee;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10rem;
+    border: none;
+    transition: all .5s;
+
+    &:hover, &:active {
+        color: white;
+        background-color: #43CBFF;
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 3rem rgba(0,0,0, .2)
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+
+
+
+
+

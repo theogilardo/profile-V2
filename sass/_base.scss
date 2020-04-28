@@ -14,10 +14,6 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
 
-// SHADOW
-
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
 }
 
   $bp-largest: 75em;     // 1200px
@@ -45,6 +41,6 @@ html {
 }
 
 body {
-  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 
 }
