@@ -162,6 +162,11 @@ body {
       position: relative;
       z-index: 5; }
 
+.about {
+  padding: 20rem 0;
+  text-align: center;
+  background-color: red; }
+
 .skills {
   background-color: white;
   padding: 3rem; }
