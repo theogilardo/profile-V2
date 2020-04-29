@@ -1,21 +1,29 @@
 .btn {
-    animation: moveInBottom 2.5s;
     letter-spacing: .5rem;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1rem 2rem;
     display: inline-block;
-    background-color: #5B54FC;
-    color: #eee;
+    background-color: $color-primary;
+    color: $color-grey-light-3;
     font-size: 1.5rem;
     border: none;
     border-radius: 10rem;
     border: none;
     transition: all .5s;
 
+    &--animation {
+      animation: moveInBottom 2.5s;
+    }
+
+    &--white {
+        color: $color-primary !important;
+        background-color: $color-grey-light-3;
+        padding: 1rem 1.5rem;
+
+    }
+
     &:hover, &:active {
-        color: white;
-        background-color: #67AADC;
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 3rem rgba(0,0,0, .2)
   }

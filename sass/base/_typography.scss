@@ -1,0 +1,14 @@
+.heading-secondary {
+    padding: 3rem;
+    color: $color-primary;
+    font-size: 5rem;
+    text-align: center;
+
+    &--white {
+      padding: 3rem;
+      color: $color-primary;
+      font-size: 5rem;
+      text-align: center;
+      color: white;
+    }
+}

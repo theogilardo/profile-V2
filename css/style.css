@@ -1,14 +1,18 @@
-:root {
-  --color-primary: #eb2f64;
-  --color-primary-light: #FF3366;
-  --color-primary-dark: #BA265D;
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
-  --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999; }
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 * {
   margin: 0;
@@ -26,6 +30,41 @@ html {
 body {
   font-family: 'Open Sans', sans-serif; }
 
+.heading-secondary {
+  padding: 3rem;
+  color: #5b54fc;
+  font-size: 5rem;
+  text-align: center; }
+  .heading-secondary--white {
+    padding: 3rem;
+    color: #5b54fc;
+    font-size: 5rem;
+    text-align: center;
+    color: white; }
+
+.btn {
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  background-color: #5b54fc;
+  color: #f0eeee;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10rem;
+  border: none;
+  transition: all .5s; }
+  .btn--animation {
+    animation: moveInBottom 2.5s; }
+  .btn--white {
+    color: #5b54fc !important;
+    background-color: #f0eeee;
+    padding: 1rem 1.5rem; }
+  .btn:hover, .btn:active {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+
 .header {
   height: 100vh;
   background-image: linear-gradient(to right, rgba(153, 153, 153, 0.5), rgba(17, 17, 17, 0.5)), url(../img/mountain.jpg);
@@ -34,8 +73,7 @@ body {
   position: relative; }
   .header::after {
     content: "";
-    color: black;
-    background-color: #5B54FC;
+    background-color: #5b54fc;
     opacity: .7;
     clip-path: polygon(75% 0, 100% 0%, 100% 100%, 22% 100%);
     height: 100%;
@@ -56,9 +94,7 @@ body {
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-    overflow: hidden; }
+    justify-content: space-between; }
   .header__information {
     padding: 3rem; }
   .header__image {
@@ -74,7 +110,7 @@ body {
     letter-spacing: .5rem;
     text-transform: uppercase;
     font-size: 3.5rem;
-    color: #5B54FC;
+    color: #5b54fc;
     margin-bottom: 5rem; }
     .header__text--black {
       color: #555;
@@ -82,38 +118,47 @@ body {
   .header__photo {
     width: 50rem; }
 
-.btn {
-  animation: moveInBottom 2.5s;
-  letter-spacing: .5rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  display: inline-block;
-  background-color: #5B54FC;
-  color: #eee;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 10rem;
-  border: none;
-  transition: all .5s; }
-  .btn:hover, .btn:active {
-    color: white;
-    background-color: #67AADC;
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+.navigation {
+  width: 100%;
+  padding: 3rem 5rem;
+  margin-right: 1rem; }
+  .navigation__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .navigation__item {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .25rem;
+    width: max-content;
+    font-weight: 600;
+    font-size: 1.4rem;
+    list-style: none; }
+    .navigation__item:not(:last-child) {
+      margin-right: 5rem; }
+    .navigation__item a {
+      text-decoration: none;
+      color: #333; }
+  .navigation__item--contact {
+    margin-left: auto;
+    margin-right: 2rem;
+    position: relative;
+    z-index: 5; }
 
-@keyframes moveInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-10rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.skills {
+  background-color: white;
+  padding: 3rem; }
+  .skills__box {
+    background-color: #5b54fc;
+    opacity: .7; }
+  .skills__icons {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .skills__icon {
+    font-size: 5rem;
+    color: #f0eeee;
+    transition: all .3s; }
+    .skills__icon:hover {
+      transform: scale(1.3); }
