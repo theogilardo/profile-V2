@@ -22,21 +22,38 @@
           margin-right: 5rem;
         }
 
-        a {
+        &--underline {
             text-decoration: none;
             color: $color-grey-dark-1;
+            transition: border-bottom .2s;
+            position: relative;
+        }
+
+        &--underline::after {
+            position: absolute;
+            content: "";
+            opacity: 0;
+            background-color: $color-primary;
+            height: 15%;
+            width: 100%;
+            top: 2.3rem;
+            left: 0;
+            transition: opacity .5s;
+        }
+
+        &--underline:hover::after {
+            opacity: 1;
+        }
+
+
+
+        &--contact {
+            margin-left: auto;
+            margin-right: 2rem;
+            position: relative;
+            z-index: 5
         }
     }
-
-    &__item--contact {
-        margin-left: auto;
-        margin-right: 2rem;
-        // background-color: $color-grey-light-3;
-        position: relative;
-        z-index: 5
-
-    }
-
 
 }
 
