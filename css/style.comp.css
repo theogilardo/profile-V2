@@ -8,9 +8,7 @@
   --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999;
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3); }
+  --color-grey-dark-3: #999; }
 
 * {
   margin: 0;
@@ -24,3 +22,98 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(153, 153, 153, 0.5), rgba(17, 17, 17, 0.5)), url(../img/mountain.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .header::after {
+    content: "";
+    color: black;
+    background-color: #5B54FC;
+    opacity: .7;
+    clip-path: polygon(75% 0, 100% 0%, 100% 100%, 22% 100%);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .header__box {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    background-color: #eee;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    overflow: hidden; }
+  .header__information {
+    padding: 3rem; }
+  .header__image {
+    width: 50%;
+    height: 100%;
+    align-self: center;
+    display: block;
+    margin-right: 5rem;
+    object-fit: cover;
+    background-position: center; }
+  .header__text {
+    animation: moveInTop 2.5s;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #5B54FC;
+    margin-bottom: 5rem; }
+    .header__text--black {
+      color: #555;
+      font-size: 2.5rem; }
+  .header__photo {
+    width: 50rem; }
+
+.btn {
+  animation: moveInBottom 2.5s;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  background-color: #5B54FC;
+  color: #eee;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10rem;
+  border: none;
+  transition: all .5s; }
+  .btn:hover, .btn:active {
+    color: white;
+    background-color: #67AADC;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
