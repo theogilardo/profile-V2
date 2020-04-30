@@ -1,70 +1,21 @@
 .contact {
-    padding: 5rem;
     text-align: center;
-    position: relative;
-
-    &::after {
-        content: "";
-        background-color: $color-layout;
-        position: absolute;
-        clip-path: polygon(51% 0%, 100% 58%, 100% 100%, 71% 100%, 0 0);
-        height: 100%;
-        width: 100%;
-        top: 0;
-        right: 0;
-        z-index: -1;
-    }
+    padding: 4rem 2rem;
 
     &__box {
-        margin-top: 6rem;
-        // background-color: $color-grey-light-1;
+        margin-top: 4rem;
         background-color: transparent;
         display: flex;
         align-items: center;
-        // justify-content: space-around;
-    }
-
-    &__text {
-        flex: 0 0 50%;
-        font-size: 1.4rem;
-        padding: 2rem 7rem;
-        line-height: 2.2;
-        text-rendering: optimizeLegebility;
-        text-align: justify;
+        justify-content: space-around;
     }
 
     &__item {
         flex: 0 0 50%;
-        align-self: flex-start;
-        position: relative;
-
-        &::after {
-            content: "";
-            background-color: $color-layout;
-            position: absolute;
-            clip-path: polygon(100% 0, 75% 0, 100% 25%);
-            height: 100%;
-            width: 100%;
-            top: -2rem;
-            right: 0;
-        }
-
-        &::before {
-            content: "";
-            background-color: $color-grey-light-1;
-            position: absolute;
-            clip-path: polygon(0 75%, 0 100%, 25% 100%);
-            height: 100%;
-            width: 100%;
-            bottom: -2rem;
-            left: -2rem;
-            z-index: 10;
-        }
     }
 
     &__img {
         width: 100%;
-        position: relative;
         display: block;
         object-fit: contain;
     }
