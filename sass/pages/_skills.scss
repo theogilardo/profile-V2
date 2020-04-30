@@ -1,5 +1,7 @@
 .skills {
     position: relative;
+    text-align: center;
+    padding: 7rem 0;
 
     &::after {
         content: "";
@@ -14,11 +16,10 @@
     }
 
 
-      text-align: center;
-      padding: 5rem 0;
+
 
       &__box {
-          margin-top: 8rem;
+          margin-top: 10rem;
       }
 
       &__icons {

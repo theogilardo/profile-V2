@@ -208,7 +208,7 @@ body {
   .header__text-content h2 {
     font-size: 4.5rem;
     text-transform: uppercase;
-    color: #FFF896; }
+    color: #FDCE2E; }
   .header__text-content p {
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
@@ -233,7 +233,7 @@ body {
   position: relative; }
   .about::after {
     content: "";
-    background-color: #FFF896;
+    background-color: #FDCE2E;
     position: absolute;
     clip-path: polygon(51% 0%, 100% 58%, 100% 100%, 71% 100%, 0 0);
     height: 100%;
@@ -259,7 +259,7 @@ body {
     position: relative; }
     .about__item::after {
       content: "";
-      background-color: #FFF896;
+      background-color: #FDCE2E;
       position: absolute;
       clip-path: polygon(100% 0, 75% 0, 100% 25%);
       height: 100%;
@@ -285,10 +285,10 @@ body {
 .skills {
   position: relative;
   text-align: center;
-  padding: 5rem 0; }
+  padding: 7rem 0; }
   .skills::after {
     content: "";
-    background-color: #FFF896;
+    background-color: #FDCE2E;
     position: absolute;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 84%, 71% 0);
     height: 100%;
@@ -297,7 +297,7 @@ body {
     right: 0;
     z-index: -1; }
   .skills__box {
-    margin-top: 8rem; }
+    margin-top: 10rem; }
   .skills__icons {
     display: flex;
     align-items: center;
@@ -313,11 +313,11 @@ body {
 
 .projects {
   text-align: center;
-  padding: 6rem 0;
+  padding: 7rem 0 2rem 0;
   position: relative; }
   .projects::after {
     content: "";
-    background-color: #FFF896;
+    background-color: #FDCE2E;
     position: absolute;
     clip-path: polygon(100% 0, 0 0, 0 61%);
     height: 100%;
@@ -379,3 +379,23 @@ body {
   .contact__text {
     flex: 0 0 85%;
     text-align: center; }
+
+.footer {
+  background-color: #5b54fc;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .footer__text {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: 1.4rem; }
+  .footer__social-networks {
+    display: flex; }
+  .footer__link:not(:last-child) {
+    margin-right: 2rem; }
+  .footer__icon {
+    color: white;
+    font-size: 2.5rem; }
