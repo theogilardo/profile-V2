@@ -1,0 +1,45 @@
+.skills {
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: $color-layout;
+        position: absolute;
+        clip-path: polygon(100% 0, 84% 100%, 0 100%, 0 82%, 58% 0);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+
+      text-align: center;
+      padding: 5rem 0;
+
+      &__box {
+          margin-top: 8rem;
+      }
+
+      &__icons {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+      }
+
+      &__icon {
+
+          &--text {
+              font-style: 3rem;
+              margin-bottom: 2rem;
+              color: $color-grey-dark-1;
+          }
+
+
+          &--img {
+              width: 10rem;
+              height: 10rem;
+              color: $color-primary;
+          }
+      }
+}
