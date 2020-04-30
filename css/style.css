@@ -81,6 +81,18 @@ body {
   top: 50%;
   left: 102%; }
 
+.mr-small {
+  margin-right: 2rem; }
+
+.mb-small {
+  margin-bottom: 2rem; }
+
+.mb-medium {
+  margin-bottom: 4rem; }
+
+.mb-big {
+  margin-bottom: 6rem; }
+
 .btn {
   letter-spacing: .5rem;
   text-transform: uppercase;
@@ -102,6 +114,24 @@ body {
   .btn--information {
     display: block; }
   .btn:hover, .btn:active {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+
+.btn-contact {
+  width: 25rem;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+  color: #f0eeee;
+  background-color: #5b54fc;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  transition: all .5s; }
+  .btn-contact--animation {
+    animation: moveInBottom 2.5s; }
+  .btn-contact:hover, .btn-contact:active {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
 
@@ -342,3 +372,10 @@ body {
     width: 100%;
     display: block;
     object-fit: contain; }
+  .contact__icon {
+    flex: 0 0 10%;
+    margin-right: auto;
+    font-size: 2rem; }
+  .contact__text {
+    flex: 0 0 85%;
+    text-align: center; }

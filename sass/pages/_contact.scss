@@ -19,4 +19,23 @@
         display: block;
         object-fit: contain;
     }
+
+    &__icon {
+      flex: 0 0 10%;
+      margin-right: auto;
+      font-size: 2rem;
+    }
+
+    &__text {
+      flex: 0 0 85%;
+      text-align: center;
+    }
+
 }
+
+
+
+
+
+
+
