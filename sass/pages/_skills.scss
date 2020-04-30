@@ -5,7 +5,7 @@
         content: "";
         background-color: $color-layout;
         position: absolute;
-        clip-path: polygon(100% 0, 84% 100%, 0 100%, 0 82%, 58% 0);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 84%, 71% 0);
         height: 100%;
         width: 100%;
         top: 0;
@@ -37,8 +37,8 @@
 
 
           &--img {
-              width: 10rem;
-              height: 10rem;
+              width: 9rem;
+              height: 9rem;
               color: $color-primary;
           }
       }
