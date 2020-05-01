@@ -20,6 +20,17 @@
   100% {
     opacity: 1; } }
 
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -93,6 +104,15 @@ body {
 .mb-big {
   margin-bottom: 6rem; }
 
+.mt-small {
+  margin-top: 2rem; }
+
+.mt-medium {
+  margin-top: 4rem; }
+
+.mt-big {
+  margin-top: 6rem; }
+
 .btn {
   letter-spacing: .5rem;
   text-transform: uppercase;
@@ -111,6 +131,10 @@ body {
     color: #5b54fc !important;
     background-color: #f0eeee;
     padding: 1rem 1.5rem; }
+  .btn--gradient {
+    color: #5b54fc;
+    background-color: white;
+    font-weight: 600; }
   .btn--information {
     display: block; }
   .btn:hover, .btn:active {
@@ -129,8 +153,8 @@ body {
   letter-spacing: .5rem;
   text-transform: uppercase;
   transition: all .5s; }
-  .btn-contact--animation {
-    animation: moveInBottom 2.5s; }
+  .btn-contact--pulsate {
+    animation: pulsate 2s infinite; }
   .btn-contact:hover, .btn-contact:active {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
@@ -235,7 +259,7 @@ body {
     content: "";
     background-color: #FDCE2E;
     position: absolute;
-    clip-path: polygon(51% 0%, 100% 58%, 100% 100%, 71% 100%, 0 0);
+    clip-path: polygon(51% 0%, 100% 58%, 100% 100%, 80% 100%, 0 0);
     height: 100%;
     width: 100%;
     top: 0;
@@ -290,7 +314,7 @@ body {
     content: "";
     background-color: #FDCE2E;
     position: absolute;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 84%, 71% 0);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%, 80% 0);
     height: 100%;
     width: 100%;
     top: 0;
@@ -329,7 +353,7 @@ body {
     right: 0;
     z-index: -1; }
   .projects__container {
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 5rem;
     display: flex;
     align-items: center;
@@ -340,9 +364,11 @@ body {
     margin: 2rem;
     padding: 2rem;
     width: 100%;
-    height: 35rem;
-    border-radius: 5px; }
+    height: 35rem; }
     .projects__card__side {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
       position: absolute;
       top: 0;
       left: 0;
@@ -351,8 +377,6 @@ body {
       justify-content: center;
       background-size: cover;
       background-position: center;
-      width: 100%;
-      height: 100%;
       transition: all .9s ease; }
       .projects__card__side--front--vaycar {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/vaycar.jpg); }
@@ -363,7 +387,20 @@ body {
       .projects__card__side--back {
         transform: rotateY(-180deg);
         backface-visibility: hidden;
-        background-image: linear-gradient(to right bottom, #5b54fc, #FDCE2E); }
+        background-color: #5b54fc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; }
+        .projects__card__side--back__text-description {
+          padding: 2rem 3rem;
+          font-size: 1.3rem;
+          letter-spacing: .1rem;
+          text-align: justify;
+          color: white; }
+        .projects__card__side--back__img {
+          width: 7rem;
+          margin-top: 2rem; }
     .projects__card:hover .projects__card__side {
       transform: rotateY(180deg);
       backface-visibility: hidden; }
@@ -372,7 +409,7 @@ body {
   .projects__name {
     margin-bottom: 2rem;
     text-decoration: none;
-    letter-spacing: 1.2rem;
+    letter-spacing: 1rem;
     text-transform: uppercase;
     font-size: 2.5rem;
     color: white; }

@@ -19,7 +19,12 @@
         color: $color-primary !important;
         background-color: $color-grey-light-3;
         padding: 1rem 1.5rem;
+    }
 
+    &--gradient {
+        color: $color-primary;
+        background-color: $color-grey-light-1;
+        font-weight: 600;
     }
 
     &--information {
@@ -45,9 +50,10 @@
     text-transform: uppercase;
     transition: all .5s;
 
-    &--animation {
-      animation: moveInBottom 2.5s;
+    &--pulsate {
+        animation: pulsate 2s infinite;
     }
+
 
     &:hover, &:active {
         transform: translateY(-0.3rem);
