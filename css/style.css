@@ -1,3 +1,12 @@
+/*
+
+0 - 600 px : Phone -> phone
+600 - 900px : Tablet Portrait --> tab-port
+900 - 1200 : Tablet Landscape --> tab-desktop
+1200 - 1800 : Normal Style
+1800+ : Big Laptop. --> big-desktop
+
+*/
 @keyframes moveInTop {
   0% {
     opacity: 0;
@@ -31,20 +40,36 @@
     transform: scale(1);
     box-shadow: none; } }
 
-* {
-  margin: 0;
-  padding: 0; }
-
 *,
-*::before,
-*::after {
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%; }
+  @media (max-width: 65em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 43.5em) {
+    html {
+      font-size: 40%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (max-width: 22em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   color: #333; }
 
@@ -69,6 +94,9 @@ body {
   font-weight: 400;
   color: #333;
   background-color: transparent; }
+  @media (max-width: 37.5em) {
+    .heading-1 {
+      font-size: 2.5rem; } }
 
 .heading-1::before {
   content: "";
@@ -80,6 +108,9 @@ body {
   width: 10rem;
   top: 50%;
   right: 109%; }
+  @media (max-width: 37.5em) {
+    .heading-1::before {
+      width: 5rem; } }
 
 .heading-1::after {
   content: "";
@@ -91,6 +122,9 @@ body {
   width: 10rem;
   top: 50%;
   left: 102%; }
+  @media (max-width: 37.5em) {
+    .heading-1::after {
+      width: 5rem; } }
 
 .mr-small {
   margin-right: 2rem; }
@@ -217,24 +251,32 @@ body {
     position: absolute;
     top: 0;
     left: 0; }
+    @media (max-width: 37.5em) {
+      .header::after {
+        clip-path: polygon(100% 0, 55% 0, 100% 32%); } }
   .header__box {
     padding: 5rem;
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 19%;
+    margin-left: 10rem;
     transform: translate(-50%, -50%);
     animation: appearEase 3s; }
+    @media (max-width: 37.5em) {
+      .header__box {
+        left: 50%;
+        margin-left: 0; } }
   .header__text-content h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 700;
     letter-spacing: 1.2rem;
     text-transform: uppercase; }
   .header__text-content h2 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: #FDCE2E; }
   .header__text-content p {
-    font-size: 2.5rem;
+    font-size: 1rem;
     margin-bottom: 2.5rem;
     margin-left: .5rem;
     font-style: italic; }
@@ -250,6 +292,9 @@ body {
     bottom: 0;
     right: -2rem;
     z-index: 10; }
+    @media (max-width: 56.25em) {
+      .header__image {
+        display: none; } }
 
 .about {
   padding: 5rem;
@@ -269,17 +314,21 @@ body {
     margin-top: 6rem;
     background-color: transparent;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
+    @media (max-width: 56.25em) {
+      .about__box {
+        display: inline-block; } }
   .about__text {
     flex: 0 0 50%;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 2rem 7rem;
     line-height: 2.2;
     text-rendering: optimizeLegebility;
     text-align: justify; }
   .about__item {
     flex: 0 0 50%;
-    align-self: flex-start;
+    align-self: center;
     position: relative; }
     .about__item::after {
       content: "";
@@ -290,6 +339,9 @@ body {
       width: 100%;
       top: -2rem;
       right: 0; }
+      @media (max-width: 56.25em) {
+        .about__item::after {
+          display: none; } }
     .about__item::before {
       content: "";
       background-color: white;
@@ -300,11 +352,22 @@ body {
       bottom: -2rem;
       left: -2rem;
       z-index: 10; }
+      @media (max-width: 56.25em) {
+        .about__item::before {
+          display: none; } }
   .about__img {
     width: 100%;
     position: relative;
     display: block;
     object-fit: contain; }
+    @media (max-width: 56.25em) {
+      .about__img {
+        width: 60%;
+        float: left;
+        padding: 4rem; } }
+    @media (max-width: 22em) {
+      .about__img {
+        display: none; } }
 
 .skills {
   position: relative;
@@ -326,8 +389,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around; }
+    @media (max-width: 37.5em) {
+      .skills__icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; } }
+    @media (max-width: 22em) {
+      .skills__icons {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr; } }
+  @media (max-width: 37.5em) {
+    .skills__icon:not(:last-child) {
+      margin-bottom: 5rem; } }
   .skills__icon--text {
-    font-style: 3rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
     color: #333; }
   .skills__icon--img {
@@ -335,6 +411,10 @@ body {
     height: 9rem;
     color: #5b54fc;
     transition: transform .5s; }
+    @media (max-width: 37.5em) {
+      .skills__icon--img {
+        width: 20rem;
+        height: 20rem; } }
     .skills__icon--img:hover {
       transform: scale(1.15); }
 
@@ -359,12 +439,28 @@ body {
     align-items: center;
     justify-content: space-around;
     flex: 0 0 100%; }
+    @media (max-width: 37.5em) {
+      .projects__container {
+        flex-direction: column; } }
   .projects__card {
     position: relative;
     margin: 2rem;
     padding: 2rem;
     width: 100%;
     height: 35rem; }
+    @media (max-width: 65em) {
+      .projects__card {
+        height: 25rem; } }
+    @media (max-width: 37.5em) {
+      .projects__card {
+        flex-direction: column;
+        width: 60%;
+        height: 40rem; } }
+    @media (max-width: 22em) {
+      .projects__card {
+        flex-direction: column;
+        width: 60%;
+        height: 30rem; } }
     .projects__card__side {
       width: 100%;
       height: 100%;
@@ -423,12 +519,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around; }
+    @media (max-width: 37.5em) {
+      .contact__box {
+        flex-direction: column;
+        margin-top: 10rem; } }
   .contact__item {
     flex: 0 0 50%; }
+    @media (max-width: 37.5em) {
+      .contact__item {
+        order: 1; } }
   .contact__img {
     width: 100%;
     display: block;
     object-fit: contain; }
+    @media (max-width: 37.5em) {
+      .contact__img {
+        width: 70%;
+        margin-top: 4rem; } }
   .contact__icon {
     flex: 0 0 10%;
     margin-right: auto;

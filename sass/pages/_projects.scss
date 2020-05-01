@@ -23,6 +23,10 @@
         align-items: center;
         justify-content: space-around;
         flex: 0 0 100%;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -31,6 +35,22 @@
         padding: 2rem;
         width: 100%;
         height: 35rem;
+
+        @include respond(tab-land) {
+            height: 25rem;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            width: 60%;
+            height: 40rem;
+        }
+
+        @include respond(small-phone) {
+            flex-direction: column;
+            width: 60%;
+            height: 30rem;
+        }
 
         &__side {
              width: 100%;

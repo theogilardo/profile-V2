@@ -13,29 +13,37 @@
         top: 0;
         right: 0;
         z-index: -1;
+
     }
 
     &__box {
         margin-top: 6rem;
-        // background-color: $color-grey-light-1;
         background-color: transparent;
         display: flex;
         align-items: center;
-        // justify-content: space-around;
+        flex-wrap: wrap;
+
+        @include respond(tab-port) {
+            display: inline-block
+        }
     }
 
     &__text {
         flex: 0 0 50%;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         padding: 2rem 7rem;
         line-height: 2.2;
         text-rendering: optimizeLegebility;
         text-align: justify;
+
+        // @include respond(phone) { // width: < 600?
+        //     font-size: 2.5rem;
+        // }
     }
 
     &__item {
         flex: 0 0 50%;
-        align-self: flex-start;
+        align-self: center;
         position: relative;
 
         &::after {
@@ -47,6 +55,10 @@
             width: 100%;
             top: -2rem;
             right: 0;
+
+            @include respond(tab-port) {
+                display: none;
+            }
         }
 
         &::before {
@@ -59,6 +71,10 @@
             bottom: -2rem;
             left: -2rem;
             z-index: 10;
+
+            @include respond(tab-port) {
+                display: none;
+            }
         }
     }
 
@@ -67,5 +83,16 @@
         position: relative;
         display: block;
         object-fit: contain;
+
+        @include respond(tab-port) {
+            width: 60%;
+            float: left;
+            padding: 4rem;
+        }
+
+
+        @include respond(small-phone) {
+            display: none;
+        }
     }
 }

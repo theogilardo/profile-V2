@@ -8,16 +8,30 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+
+        @include respond(phone) {
+            flex-direction: column;
+            margin-top: 10rem;
+        }
     }
 
     &__item {
         flex: 0 0 50%;
+
+        @include respond(phone) {
+            order: 1;
+        }
     }
 
     &__img {
         width: 100%;
         display: block;
         object-fit: contain;
+
+        @include respond(phone) {
+            width: 70%;
+            margin-top: 4rem;
+        }
     }
 
     &__icon {

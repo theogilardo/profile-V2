@@ -15,9 +15,6 @@
         z-index: -1;
     }
 
-
-
-
       &__box {
           margin-top: 10rem;
       }
@@ -26,12 +23,30 @@
           display: flex;
           align-items: center;
           justify-content: space-around;
+
+          @include respond(phone) {
+              display: grid;
+              grid-template-columns:  1fr 1fr;
+              grid-template-rows: 1fr 1fr;
+          }
+
+          @include respond(small-phone) {
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr;
+          }
       }
 
       &__icon {
 
+        @include respond(phone) {
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+                }
+        }
+
           &--text {
-              font-style: 3rem;
+              font-size: 3rem;
               margin-bottom: 2rem;
               color: $color-grey-dark-1;
           }
@@ -42,6 +57,12 @@
               height: 9rem;
               color: $color-primary;
               transition: transform .5s;
+
+              @include respond(phone) {
+                  width: 20rem;
+                  height: 20rem;
+              }
+
 
               &:hover {
                   transform: scale(1.15);
