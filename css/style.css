@@ -354,13 +354,17 @@ body {
       width: 100%;
       height: 100%;
       transition: all .9s ease; }
-      .projects__card__side--front {
+      .projects__card__side--front--vaycar {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/vaycar.jpg); }
+      .projects__card__side--front--beta {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/beta.png); }
+      .projects__card__side--front--gambling {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/mountain.jpg); }
       .projects__card__side--back {
         transform: rotateY(-180deg);
         backface-visibility: hidden;
         background-image: linear-gradient(to right bottom, #5b54fc, #FDCE2E); }
-    .projects__card:hover .projects__card__side--front {
+    .projects__card:hover .projects__card__side {
       transform: rotateY(180deg);
       backface-visibility: hidden; }
     .projects__card:hover .projects__card__side--back {

@@ -114,9 +114,17 @@
              height: 100%;
              transition: all .9s ease;
 
-            &--front {
-              background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/vaycar.jpg);
-            }
+                &--front--vaycar {
+                    background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/vaycar.jpg);
+                }
+
+                &--front--beta {
+                    background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/beta.png);
+                }
+
+                &--front--gambling {
+                    background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/mountain.jpg);
+                }
 
             &--back {
               transform: rotateY(-180deg);
@@ -125,14 +133,29 @@
             }
         }
 
-        &:hover &__side--front {
-          transform: rotateY(180deg);
-          backface-visibility: hidden;
 
+        &:hover &__side {
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
         }
 
+        // &:hover &__side--front--vaycar {
+        //     transform: rotateY(180deg);
+        //     backface-visibility: hidden;
+        // }
+
+        // &:hover &__side--front--beta {
+        //     transform: rotateY(180deg);
+        //     backface-visibility: hidden;
+        // }
+
+        // &:hover &__side--front--gambling {
+        //     transform: rotateY(180deg);
+        //     backface-visibility: hidden;
+        // }
+
         &:hover &__side--back {
-          transform: rotateY(0deg);
+            transform: rotateY(0deg);
         }
     }
 
