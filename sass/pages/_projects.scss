@@ -1,3 +1,71 @@
+// .projects {
+//     text-align: center;
+//     padding: 7rem 0 2rem 0;
+//     position: relative;
+
+
+//     &::after {
+//         content: "";
+//         background-color: $color-layout;
+//         position: absolute;
+//         clip-path: polygon(100% 0, 0 0, 0 61%);
+//         height: 100%;
+//         width: 100%;
+//         top: 0;
+//         right: 0;
+//         z-index: -1;
+//     }
+
+//     &__container {
+//         margin-top: 2rem;
+//         padding: 5rem;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//         flex: 0 0 100%;
+//     }
+
+//     &__box {
+//         margin: 2rem;
+//         padding: 2rem;
+//         width: 100%;
+//         height: 35rem;
+//         border-radius: 5px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         background-size: cover;
+//         background-position: center;
+
+//         &--vaycar {
+//             background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/vaycar.jpg);
+//         }
+
+//         &--beta {
+//             background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/beta.png);
+
+//         }
+
+//         &--gamb {
+//             background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/mountain.jpg);
+//         }
+
+
+//     }
+
+//     &__name {
+//         margin-bottom: 2rem;
+//         text-decoration: none;
+//         letter-spacing: 1.2rem;
+//         text-transform: uppercase;
+//         font-size: 2.5rem;
+//         color: $color-grey-light-1;
+//     }
+// }
+
+
+// TEST
+
 .projects {
     text-align: center;
     padding: 7rem 0 2rem 0;
@@ -25,33 +93,49 @@
         flex: 0 0 100%;
     }
 
-    &__box {
+    &__card {
+        position: relative;
         margin: 2rem;
         padding: 2rem;
         width: 100%;
         height: 35rem;
         border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-size: cover;
-        background-position: center;
 
-        &--vaycar {
-            background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/vaycar.jpg);
+        &__side {
+             position: absolute;
+             top: 0;
+             left: 0;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background-size: cover;
+             background-position: center;
+             width: 100%;
+             height: 100%;
+             transition: all .9s ease;
+
+            &--front {
+              background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/vaycar.jpg);
+            }
+
+            &--back {
+              transform: rotateY(-180deg);
+              backface-visibility: hidden;
+              background-image: linear-gradient(to right bottom, $color-primary, $color-layout);
+            }
         }
 
-        &--beta {
-            background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/beta.png);
+        &:hover &__side--front {
+          transform: rotateY(180deg);
+          backface-visibility: hidden;
 
         }
 
-        &--gamb {
-            background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/mountain.jpg);
+        &:hover &__side--back {
+          transform: rotateY(0deg);
         }
-
-
     }
+
 
     &__name {
         margin-bottom: 2rem;
@@ -62,4 +146,6 @@
         color: $color-grey-light-1;
     }
 }
+
+
 

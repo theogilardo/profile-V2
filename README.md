@@ -1,2 +1,1 @@
-# profile-V2
-Version 2 of Profile
+This is a presentation of my portfolio. Theo Gilardo. Junior Frontend Developer.

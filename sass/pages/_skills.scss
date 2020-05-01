@@ -41,6 +41,11 @@
               width: 9rem;
               height: 9rem;
               color: $color-primary;
+              transition: transform .5s;
+
+              &:hover {
+                  transform: scale(1.15);
+              }
           }
       }
 }
