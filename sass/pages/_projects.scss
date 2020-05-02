@@ -42,7 +42,7 @@
 
         @include respond(phone) {
             flex-direction: column;
-            width: 60%;
+            width: 50%;
             height: 40rem;
         }
 
@@ -94,13 +94,24 @@
                   letter-spacing: .1rem;
                   text-align: justify;
                   color: $color-grey-light-1;
+
+                  @include respond(tab-land) {
+                      font-size: 1.1rem;
+                  }
                 }
 
                 &__img {
                     width: 7rem;
                     margin-top: 2rem;
-                }
 
+                    @include respond(tab-land) {
+                        width: 5rem;
+                    }
+
+                    @include respond(tab-land) {
+                        width: 7rem;
+                    }
+                }
             }
         }
 

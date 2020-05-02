@@ -569,7 +569,7 @@ body {
     @media (max-width: 37.5em) {
       .projects__card {
         flex-direction: column;
-        width: 60%;
+        width: 50%;
         height: 40rem; } }
     @media (max-width: 23.125em) {
       .projects__card {
@@ -609,9 +609,18 @@ body {
           letter-spacing: .1rem;
           text-align: justify;
           color: white; }
+          @media (max-width: 65em) {
+            .projects__card__side--back__text-description {
+              font-size: 1.1rem; } }
         .projects__card__side--back__img {
           width: 7rem;
           margin-top: 2rem; }
+          @media (max-width: 65em) {
+            .projects__card__side--back__img {
+              width: 5rem; } }
+          @media (max-width: 65em) {
+            .projects__card__side--back__img {
+              width: 7rem; } }
     .projects__card:hover .projects__card__side {
       transform: rotateY(180deg);
       backface-visibility: hidden; }
