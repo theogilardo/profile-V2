@@ -44,22 +44,30 @@
 
   .menu {
 
+      display: none;
+
+      @include respond(phone) {
+      display: block;
+      }
+
       &__checkbox {
           display: none;
       }
 
       &__button {
-          background-color: $color-grey-light-1;
+          background-color: $color-primary;
           height: 7rem;
           width: 7rem;
           position: fixed;
           top: 6rem;
-          right: 6rem;
+          right: 4rem;
           border-radius: 50%;
           z-index: 2000;
           box-shadow: 0 1rem 3rem rgba(black, .1);
           text-align: center;
           cursor: pointer;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+
       }
 
       &__background {
@@ -68,9 +76,11 @@
           border-radius: 50%;
           position: fixed;
           top: 6.5rem;
-          right: 6.5rem;
-          background-color: blue;
+          right: 4.5rem;
+          // background-color: $color-primary;
+          background-image: radial-gradient($color-primary, $color-layout);
           z-index: 1000;
+          transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
       }
 
@@ -83,23 +93,103 @@
 
         opacity: 0;
         width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+        // transition: opacity .7s .2s;
       }
 
       &__list {
-
+          @include absCenter;
+          text-align: center;
+          list-style: none;
       }
 
       &__item {
-
+          padding: 5rem;
       }
 
       &__link {
+          display: inline-block;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: .7rem;
+          color: $color-grey-light-1;
+          font-size: 4rem;
+          font-weight: 300;
+          cursor: pointer;
+          width: 50rem;
+      }
 
+      &__checkbox:checked ~ &__background {
+          transform: scale(80);
+      }
+
+      &__checkbox:checked ~ &__nav {
+          opacity: 1;
+          width: 100%;
+      }
+
+      &__icon {
+          position: relative;
+          margin-top: 3.5rem;
+
+          &,
+          &::before,
+          &::after {
+              width: 3.5rem;
+              height: 2px;
+              border-radius: 2px;
+              background-color: $color-grey-light-1;
+              display: inline-block;
+          }
+
+          &::before,
+          &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              transition: all .2s;
+          }
+
+          &::before { top: -1.2rem; }
+          &::after { top: 1.2rem; }
+      }
+
+      // &__button:hover &__icon::before {
+      //     top: -1.2rem;
+      // }
+
+      // &__button:hover &__icon::after {
+      //     top: 1.2rem;
+      // }
+
+      &__checkbox:checked + &__button &__icon {
+          background-color: transparent;
+      }
+
+      &__checkbox:checked + &__button &__icon::before {
+          top: 0;
+          transform: rotate(135deg);
+      }
+
+      &__checkbox:checked + &__button &__icon::after {
+          top: 0;
+          transform: rotate(-135deg);
       }
 
 
 
+
+}
+
+
 //////////////////NAVIGATION MAC /////////////////////
+
+
+.navigation {
+      width: 100%;
+      padding: 3rem 5rem;
+      margin-right: 1rem;
+      position: relative;
 
     &__list {
         display: flex;
@@ -156,8 +246,9 @@
             z-index: 5
         }
     }
-
 }
+
+
 
 
 
