@@ -603,6 +603,9 @@ body {
         flex-direction: column;
         justify-content: space-around;
         align-items: center; }
+        @media (max-width: 37.5em) {
+          .projects__card__side--back {
+            display: none; } }
         .projects__card__side--back__text-description {
           padding: 2rem 3rem;
           font-size: 1.3rem;
