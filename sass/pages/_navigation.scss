@@ -1,12 +1,114 @@
-.navigation {
-    width: 100%;
-    padding: 3rem 5rem;
-    margin-right: 1rem;
+// .navigation {
+//     width: 100%;
+//     padding: 3rem 5rem;
+//     margin-right: 1rem;
+//     position: relative;
+
+    // &__button {
+    //     position: absolute;
+    //     top: 6rem;
+    //     right: 6rem;
+    //     display: none;
+
+    //     @include respond(phone) {
+    //         display: block;
+    //     }
+    // }
+
+    // &__icon {
+    //     position: relative;
+    //      &, &::before, &::after {
+    //         z-index: 200;
+    //         background-color: $color-grey-light-1;
+    //         border-radius: 5px;
+    //         width: 8rem;
+    //         height: .5rem;
+    //     }
+
+    //     &::before, &::after {
+    //         content: "";
+    //         position: absolute;
+    //     }
+
+    //     &::before {
+    //         top: -1.2rem;
+    //     }
+
+    //     &::after {
+    //         top: 1.2rem;
+    //     }
+    // }
+
+
+////////////////////////MENU IPHONE/////////////////////////
+
+  .menu {
+
+      &__checkbox {
+          display: none;
+      }
+
+      &__button {
+          background-color: $color-grey-light-1;
+          height: 7rem;
+          width: 7rem;
+          position: fixed;
+          top: 6rem;
+          right: 6rem;
+          border-radius: 50%;
+          z-index: 2000;
+          box-shadow: 0 1rem 3rem rgba(black, .1);
+          text-align: center;
+          cursor: pointer;
+      }
+
+      &__background {
+          height: 6rem;
+          width: 6rem;
+          border-radius: 50%;
+          position: fixed;
+          top: 6.5rem;
+          right: 6.5rem;
+          background-color: blue;
+          z-index: 1000;
+
+      }
+
+      &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+      }
+
+      &__list {
+
+      }
+
+      &__item {
+
+      }
+
+      &__link {
+
+      }
+
+
+
+//////////////////NAVIGATION MAC /////////////////////
 
     &__list {
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__item {
