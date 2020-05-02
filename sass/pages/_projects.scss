@@ -88,6 +88,10 @@
               justify-content: space-around;
               align-items: center;
 
+              @include respond(phone) {
+                  display: none;
+              }
+
                 &__text-description {
                   padding: 2rem 3rem;
                   font-size: 1.3rem;
