@@ -603,7 +603,7 @@ body {
         flex-direction: column;
         justify-content: space-around;
         align-items: center; }
-        @media (max-width: 37.5em) {
+        @media (max-width: 56.25em) {
           .projects__card__side--back {
             display: none; } }
         .projects__card__side--back__text-description {
@@ -627,8 +627,14 @@ body {
     .projects__card:hover .projects__card__side {
       transform: rotateY(180deg);
       backface-visibility: hidden; }
+      @media (max-width: 56.25em) {
+        .projects__card:hover .projects__card__side {
+          transform: rotateY(0); } }
     .projects__card:hover .projects__card__side--back {
       transform: rotateY(0deg); }
+      @media (max-width: 56.25em) {
+        .projects__card:hover .projects__card__side--back {
+          transform: rotateY(0); } }
   .projects__name {
     margin-bottom: 2rem;
     text-decoration: none;
