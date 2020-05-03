@@ -647,7 +647,7 @@ body {
       .contact__item {
         order: 1; } }
   .contact__img {
-    width: 100%;
+    width: 80%;
     display: block;
     object-fit: contain; }
     @media (max-width: 37.5em) {

@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
@@ -39,16 +41,16 @@
             <nav class="navigation">
                 <ul class="navigation__list">
                       <li class="navigation__item ">
-                          <a class="navigation__item--underline" href="#about">About Me</a>
+                          <a class="navigation__item--underline js--scroll-to-about" href="#about">About Me</a>
                       </li>
                       <li class="navigation__item ">
-                          <a class="navigation__item--underline" href="#skills">My skills</a>
+                          <a class="navigation__item--underline js--scroll-to-skills" href="#skills">My skills</a>
                       </li>
                       <li class="navigation__item">
-                          <a class="navigation__item--underline" href="#projects">my projects</a>
+                          <a class="navigation__item--underline js--scroll-to-projects" href="#projects">my projects</a>
                       </li>
                       <li class="navigation__item navigation__item--contact ">
-                          <a class="btn btn--white" href="#contact">contact me</a>
+                          <a class="btn btn--white js--scroll-to-contact" href="#contact">contact me</a>
                       </li>
                 </ul>
             </nav>
@@ -57,14 +59,14 @@
                         <h2>Hello, I am</h2>
                         <h1>Theo Gilardo</h1>
                         <p>Junior Front-end developer</p>
-                        <a href="#about" class="btn btn--animation">Learn More</a>
+                        <a href="#about" class="btn btn--animation js--scroll-to-about">Learn More</a>
                     </div>
                 </div>
                 <img src="img/theo-3-bw.png" class="header__image" alt="">
 
         </header>
 
-        <section class="about" id="about">
+        <section class="about js--section-about">
             <h1 class="heading-1">About Me</h1>
             <div class="about__box">
                 <figure class="about__item">
@@ -74,7 +76,7 @@
             </div>
         </section>
 
-       <section class="skills" id="skills">
+       <section class="skills js--section-skills">
            <h2 class="heading-1"> My Skills</h2>
            <div class="skills__box">
                 <div class="skills__icons">
@@ -98,7 +100,7 @@
             </div>
        </section>
 
-        <section class="projects" id="projects">
+        <section class="projects js--section-projects">
             <h2 class="heading-1">My Projects</h2>
             <div class="projects__container">
               <div class="projects__card">
@@ -137,7 +139,7 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact js--section-contact">
             <h1 class="heading-1">Let's talk !</h1>
             <div class="contact__box">
                 <figure class="contact__item">
@@ -172,7 +174,10 @@
             </div>
         </footer>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="js/script.js"></script>
 
     </body>
 </html>
