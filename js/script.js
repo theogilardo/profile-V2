@@ -13,7 +13,7 @@ $(document).ready(function() {
   });
 
   $('.js--scroll-to-projects').click(function () {
-     $('html, body').animate({scrollTop: $('.js--section-projects').offset().top}, 1000);
+     $('html, body').animate({scrollTop: $('.js--section-work').offset().top}, 1000);
   });
 
   $('.js--scroll-to-contact').click(function () {
@@ -37,13 +37,13 @@ $(document).ready(function() {
    $('.js--wp-3').waypoint(function(direction) {
         $('.js--wp-3').addClass('animated fadeIn');
     }, {
-        offset: '60%'
+        offset: '70%'
     });
 
    $('.js--wp-4').waypoint(function(direction) {
         $('.js--wp-4').addClass('animated fadeIn');
     }, {
-        offset: '60%'
+        offset: '70%'
     });
 
 });
