@@ -25,7 +25,19 @@
     }
 
       &__box {
-          margin-top: 5rem;
+          margin-top: 10rem;
+
+
+          @include respond(big-phone) {
+              margin-top: 5rem;
+              margin-bottom: -4rem;
+          }
+
+          @include respond(phone) {
+              margin-top: 5rem;
+              margin-bottom: -4rem;
+          }
+
       }
 
       &__icons {
