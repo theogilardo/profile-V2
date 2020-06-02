@@ -46,8 +46,13 @@
         @include respond(phone) {
             text-align: center;
         }
+
+        @include respond(big-phone) {
+            text-align: center;
+        }
+
           h2 {
-            margin-bottom: 1rem;
+            margin-bottom: .5rem;
           }
 
           h1 {

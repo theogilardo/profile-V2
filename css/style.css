@@ -373,8 +373,11 @@ body {
   @media (max-width: 37.5em) {
     .header__text-content {
       text-align: center; } }
+  @media (max-width: 43.5em) {
+    .header__text-content {
+      text-align: center; } }
   .header__text-content h2 {
-    margin-bottom: 1rem; }
+    margin-bottom: .5rem; }
   .header__text-content h1 {
     font-size: 5rem;
     font-weight: 700;
