@@ -421,6 +421,12 @@ body {
   padding: 5rem;
   text-align: center;
   position: relative; }
+  @media (max-width: 43.5em) {
+    .about {
+      padding: 3rem 5rem; } }
+  @media (max-width: 37.5em) {
+    .about {
+      padding: 3rem 5rem; } }
   .about::after {
     content: "";
     background-color: #FDCE2E;
@@ -449,10 +455,10 @@ body {
     text-align: justify; }
     @media (max-width: 43.5em) {
       .about__text {
-        padding: 1rem 1.5rem; } }
+        padding: 0 1.5rem; } }
     @media (max-width: 37.5em) {
       .about__text {
-        padding: 1rem 1.5rem; } }
+        padding: 0 1.5rem; } }
   .about__item {
     flex: 0 0 50%;
     align-self: center;
@@ -504,6 +510,12 @@ body {
   text-align: center;
   padding: 7rem 0;
   margin-top: -1.5rem; }
+  @media (max-width: 43.5em) {
+    .skills {
+      padding: 3.5rem 0; } }
+  @media (max-width: 37.5em) {
+    .skills {
+      padding: 3.5rem 0; } }
   .skills::after {
     content: "";
     background-color: #FDCE2E;
