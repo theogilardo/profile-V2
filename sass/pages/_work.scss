@@ -114,26 +114,22 @@
       padding: 1.5em;
       transition: opacity .3s ease-in;
 
-      @include
-      respond(small-phone) {
+      @include respond(small-phone) {
           opacity: 1;
           background-color: transparent;
       }
 
-      @include
-      respond(phone) {
+      @include respond(phone) {
           opacity: 1;
           background-color: transparent;
       }
 
-      @include
-      respond(big-phone) {
+      @include respond(big-phone) {
           opacity: 1;
           background-color: transparent;
       }
 
-      @include
-      respond(tab-port) {
+      @include respond(tab-port) {
           opacity: 1;
           background-color: transparent;
       }
