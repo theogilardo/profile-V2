@@ -222,6 +222,18 @@ body {
     text-align: center;
     cursor: pointer;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
+    @media (max-width: 43.5em) {
+      .menu__button {
+        width: 5rem;
+        height: 5rem;
+        top: 5rem;
+        right: 3rem; } }
+    @media (max-width: 37.5em) {
+      .menu__button {
+        width: 5rem;
+        height: 5rem;
+        top: 5rem;
+        right: 3rem; } }
   .menu__background {
     height: 6rem;
     width: 6rem;
@@ -274,6 +286,14 @@ body {
       border-radius: 2px;
       background-color: white;
       display: inline-block; }
+      @media (max-width: 43.5em) {
+        .menu__icon, .menu__icon::before, .menu__icon::after {
+          width: 2.5rem;
+          height: 1rem; } }
+      @media (max-width: 37.5em) {
+        .menu__icon, .menu__icon::before, .menu__icon::after {
+          width: 2.5rem;
+          height: 1rem; } }
     .menu__icon::before, .menu__icon::after {
       content: "";
       position: absolute;

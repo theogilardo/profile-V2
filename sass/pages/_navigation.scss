@@ -27,6 +27,20 @@
           text-align: center;
           cursor: pointer;
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+
+          @include respond(big-phone) {
+              width: 5rem;
+              height: 5rem;
+              top: 5rem;
+              right: 3rem;
+          }
+
+          @include respond(phone) {
+              width: 5rem;
+              height: 5rem;
+              top: 5rem;
+              right: 3rem;
+          }
       }
 
       &__background {
@@ -99,6 +113,16 @@
               border-radius: 2px;
               background-color: $color-grey-light-1;
               display: inline-block;
+
+              @include respond(big-phone) {
+                  width: 2.5rem;
+                  height: 1rem;
+              }
+
+              @include respond(phone) {
+                  width: 2.5rem;
+                  height: 1rem;
+              }
           }
 
           &::before,
