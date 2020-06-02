@@ -447,6 +447,12 @@ body {
     line-height: 2.2;
     text-rendering: optimizeLegebility;
     text-align: justify; }
+    @media (max-width: 43.5em) {
+      .about__text {
+        flex-basis: 100%; } }
+    @media (max-width: 37.5em) {
+      .about__text {
+        flex-basis: 100%; } }
   .about__item {
     flex: 0 0 50%;
     align-self: center;
@@ -486,7 +492,10 @@ body {
         width: 60%;
         float: left;
         padding: 4rem; } }
-    @media (max-width: 23.125em) {
+    @media (max-width: 43.5em) {
+      .about__img {
+        display: none; } }
+    @media (max-width: 37.5em) {
       .about__img {
         display: none; } }
 
