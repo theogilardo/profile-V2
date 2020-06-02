@@ -598,11 +598,11 @@ body {
     color: #5b54fc;
     background-color: white; }
     .contact__info__icon--email {
-      grid-row: 1 /2;
-      grid-column: 1 / 2;
-      font-size: 5rem; }
-    .contact__info__icon--phone {
+      font-size: 5rem;
       grid-row: 2 /3;
+      grid-column: 1 / 2; }
+    .contact__info__icon--phone {
+      grid-row: 1 /2;
       grid-column: 1 / 2;
       font-size: 5rem; }
     .contact__info__text--phone {
