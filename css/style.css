@@ -370,10 +370,10 @@ body {
         left: 50%;
         margin-left: 0;
         padding: 0; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 43.5em) {
     .header__text-content {
       text-align: center; } }
-  @media (max-width: 43.5em) {
+  @media (max-width: 37.5em) {
     .header__text-content {
       text-align: center; } }
   .header__text-content h2 {
