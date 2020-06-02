@@ -48,11 +48,7 @@
 
       &__icon {
 
-        @include respond(phone) {
-            &:not(:last-child) {
-                margin-bottom: 5rem;
-                }
-        }
+          padding-bottom: 5rem;
 
           &--text {
               font-size: 3rem;
@@ -67,11 +63,11 @@
               transition: transform .5s;
 
               @include respond(big-phone) {
-                  font-size: 10rem;
+                  font-size: 13rem;
               }
 
               @include respond(phone) {
-                  font-size: 10rem;
+                  font-size: 13rem;
               }
 
 
