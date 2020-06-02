@@ -43,9 +43,9 @@
 
       &__text-content {
 
-        @include respond(big-phone) {
-            text-align: center;
-        }
+        // @include respond(big-phone) {
+        //     text-align: center;
+        // }
 
         @include respond(phone) {
             text-align: center;
