@@ -211,11 +211,11 @@ body {
     display: none; }
   .menu__button {
     background-color: #5b54fc;
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     position: fixed;
-    top: 6rem;
-    right: 4rem;
+    top: 3rem;
+    right: 2rem;
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
@@ -223,12 +223,12 @@ body {
     cursor: pointer;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); }
   .menu__background {
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
-    right: 4.5rem;
+    top: 3.25rem;
+    right: 2.25rem;
     background-image: radial-gradient(#5b54fc, #FDCE2E);
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
@@ -267,10 +267,10 @@ body {
     width: 100%; }
   .menu__icon {
     position: relative;
-    margin-top: 3.5rem; }
+    margin-top: 2.5rem; }
     .menu__icon, .menu__icon::before, .menu__icon::after {
-      width: 3.5rem;
-      height: 2px;
+      width: 2rem;
+      height: 1px;
       border-radius: 2px;
       background-color: white;
       display: inline-block; }
@@ -280,9 +280,9 @@ body {
       left: 0;
       transition: all .2s; }
     .menu__icon::before {
-      top: -1.2rem; }
+      top: -1rem; }
     .menu__icon::after {
-      top: 1.2rem; }
+      top: .8rem; }
   .menu__checkbox:checked + .menu__button .menu__icon {
     background-color: transparent; }
   .menu__checkbox:checked + .menu__button .menu__icon::before {
@@ -503,10 +503,10 @@ body {
   margin-top: -1.5rem; }
   @media (max-width: 43.5em) {
     .skills {
-      padding: 3.5rem 0; } }
+      padding: 2.5rem 0; } }
   @media (max-width: 37.5em) {
     .skills {
-      padding: 3.5rem 0; } }
+      padding: 2.5rem 0; } }
   .skills::after {
     content: "";
     background-color: #FDCE2E;
