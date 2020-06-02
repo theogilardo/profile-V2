@@ -449,10 +449,10 @@ body {
     text-align: justify; }
     @media (max-width: 43.5em) {
       .about__text {
-        padding: 1rem 4rem; } }
+        padding: 1rem 1.5rem; } }
     @media (max-width: 37.5em) {
       .about__text {
-        padding: 1rem 4rem; } }
+        padding: 1rem 1.5rem; } }
   .about__item {
     flex: 0 0 50%;
     align-self: center;
