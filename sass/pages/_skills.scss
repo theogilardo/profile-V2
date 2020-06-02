@@ -59,9 +59,14 @@
               color: $color-primary;
               transition: transform .5s;
 
+              @include respond(big-phone) {
+                  width: 10rem;
+                  height: 10rem;
+              }
+
               @include respond(phone) {
-                  width: 20rem;
-                  height: 20rem;
+                  width: 10rem;
+                  height: 10rem;
               }
 
 
