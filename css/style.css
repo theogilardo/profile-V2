@@ -629,7 +629,8 @@ body {
     letter-spacing: .3rem;
     font-size: 1.4rem; }
   .footer__social-networks {
-    display: flex; }
+    display: flex;
+    align-items: center; }
   .footer__link:not(:last-child) {
     margin-right: 2rem; }
   .footer__icon {
