@@ -1,11 +1,26 @@
-$(document).ready(function() {
+about = document.getElementById('about')
+skills = document.getElementById('skills')
+projects = document.getElementById('projects')
+contact = document.getElementById('contact')
+checkbox = document.querySelector('.checkbox')
+menu = document.querySelector('.menu')
 
+about.addEventListener('click', menuToggle)
+skills.addEventListener('click', menuToggle)
+projects.addEventListener('click', menuToggle)
+contact.addEventListener('click', menuToggle)
+
+
+function menuToggle() {
+  checkbox.checked = false;
+};
+
+$(document).ready(function() {
 
   // SCROLL BUTTONS
 
   $('.js--scroll-to-about').click(function () {
      $('html, body').animate({scrollTop: $('.js--section-about').offset().top}, 1000);
-     console.log('scrooooll');
   });
 
   $('.js--scroll-to-skills').click(function () {
