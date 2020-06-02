@@ -62,19 +62,16 @@
 
 
           &--img {
-              width: 9rem;
-              height: 9rem;
+              font-size: 9rem;
               color: $color-primary;
               transition: transform .5s;
 
               @include respond(big-phone) {
-                  width: 10rem;
-                  height: 10rem;
+                  font-size: 10rem;
               }
 
               @include respond(phone) {
-                  width: 10rem;
-                  height: 10rem;
+                  font-size: 10rem;
               }
 
 

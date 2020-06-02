@@ -541,18 +541,15 @@ body {
     margin-bottom: 2rem;
     color: #333; }
   .skills__icon--img {
-    width: 9rem;
-    height: 9rem;
+    font-size: 9rem;
     color: #5b54fc;
     transition: transform .5s; }
     @media (max-width: 43.5em) {
       .skills__icon--img {
-        width: 10rem;
-        height: 10rem; } }
+        font-size: 10rem; } }
     @media (max-width: 37.5em) {
       .skills__icon--img {
-        width: 10rem;
-        height: 10rem; } }
+        font-size: 10rem; } }
     .skills__icon--img:hover {
       transform: scale(1.15); }
 
