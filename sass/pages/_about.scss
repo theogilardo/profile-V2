@@ -3,14 +3,6 @@
     text-align: center;
     position: relative;
 
-    @include respond(big-phone) {
-        padding: 3rem 5rem
-    }
-
-    @include respond(phone) {
-        padding: 3rem 5rem
-    }
-
     &::after {
         content: "";
         background-color: $color-layout;

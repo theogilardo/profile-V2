@@ -421,12 +421,6 @@ body {
   padding: 5rem;
   text-align: center;
   position: relative; }
-  @media (max-width: 43.5em) {
-    .about {
-      padding: 3rem 5rem; } }
-  @media (max-width: 37.5em) {
-    .about {
-      padding: 3rem 5rem; } }
   .about::after {
     content: "";
     background-color: #FDCE2E;
