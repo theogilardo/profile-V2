@@ -41,9 +41,12 @@
       }
 
       &__icons {
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: 1fr;
           align-items: center;
-          justify-content: space-around;
+          justify-content: center;
+
 
           @include respond(phone) {
               display: grid;
@@ -59,8 +62,13 @@
       }
 
       &__icon {
-
+          // align-self: start;
           padding-bottom: 5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
 
           &--text {
               font-size: 3rem;
