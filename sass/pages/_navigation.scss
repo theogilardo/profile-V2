@@ -53,6 +53,7 @@
 
         opacity: 0;
         width: 0;
+        transform: translateX(-50rem);
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
         // transition: opacity .7s .2s;
       }
@@ -80,12 +81,14 @@
       }
 
       &__checkbox:checked ~ &__background {
-          transform: scale(80);
+          transform: scale(100);
       }
 
       &__checkbox:checked ~ &__nav {
+         transform: translateX(0);
           opacity: 1;
           width: 100%;
+
       }
 
       &__icon {
@@ -200,6 +203,9 @@
     }
 }
 
+.hidden {
+  display: none;
+}
 
 
 

@@ -240,6 +240,7 @@ body {
     z-index: 1500;
     opacity: 0;
     width: 0;
+    transform: translateX(-50rem);
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   .menu__list {
     position: absolute;
@@ -261,8 +262,9 @@ body {
     cursor: pointer;
     width: 50rem; }
   .menu__checkbox:checked ~ .menu__background {
-    transform: scale(80); }
+    transform: scale(100); }
   .menu__checkbox:checked ~ .menu__nav {
+    transform: translateX(0);
     opacity: 1;
     width: 100%; }
   .menu__icon {
@@ -336,6 +338,9 @@ body {
       margin-right: 2rem;
       position: relative;
       z-index: 5; }
+
+.hidden {
+  display: none; }
 
 .header {
   height: 100vh;

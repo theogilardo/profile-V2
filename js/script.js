@@ -4,6 +4,7 @@ projects = document.getElementById('projects')
 contact = document.getElementById('contact')
 checkbox = document.querySelector('.checkbox')
 menu = document.querySelector('.menu')
+menuNav = document.querySelector('.menu-nav')
 
 about.addEventListener('click', menuToggle)
 skills.addEventListener('click', menuToggle)
@@ -13,6 +14,7 @@ contact.addEventListener('click', menuToggle)
 
 function menuToggle() {
   checkbox.checked = false;
+  menuNav.classList.toggle('.hidden')
 };
 
 $(document).ready(function() {
