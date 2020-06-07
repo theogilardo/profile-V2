@@ -72,6 +72,21 @@
             font-size: 2.2rem;
         }
 
+        &__icon--download {
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+            font-size: 4.8rem;
+            cursor: pointer;
+            color: #5C55FC;
+        }
+
+        &__text--download {
+            grid-row: 3 / 4;
+            grid-column: 2 / 3;
+            justify-self: start;
+            font-size: 2.2rem;
+        }
+
     }
 }
 
