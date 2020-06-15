@@ -40,6 +40,8 @@
         }
       }
 
+
+
       @include respond(small-phone) {
           grid-template-columns: 1fr;
       }
@@ -142,5 +144,11 @@
 
     }
 }
+
+.desktop {
+    @include respond(phone) {
+      display: none;
+    }
+  }
 
 
