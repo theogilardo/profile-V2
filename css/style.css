@@ -692,6 +692,9 @@ body {
       .work__container__highlight {
         grid-column: 1 / 3; } }
     @media (max-width: 23.125em) {
+      .work__container__highlight {
+        grid-column: 1 / 2; } }
+    @media (max-width: 23.125em) {
       .work__container {
         grid-template-columns: 1fr; } }
   .work__project {

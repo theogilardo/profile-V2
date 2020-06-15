@@ -38,6 +38,10 @@
         @include respond(phone) {
           grid-column: 1 / 3;
         }
+
+        @include respond(small-phone) {
+          grid-column: 1 / 2;
+        }
       }
 
 
