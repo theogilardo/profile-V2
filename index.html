@@ -1,248 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/e8ea84e5d8.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e8ea84e5d8.js"
+      crossorigin="anonymous"
+    ></script>
 
+    <title>Theo Gilardo</title>
+  </head>
+  <body>
+    <div class="menu">
+      <input type="checkbox" class="menu__checkbox checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="menu__button">
+        <span class="menu__icon">&nbsp;</span>
+      </label>
+      <div class="menu__background">&nbsp;</div>
+      <nav class="menu__nav" id="menu-nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a id="about" class="menu__link js--scroll-to-about">About Me</a>
+          </li>
+          <li class="menu__item">
+            <a
+              id="skills"
+              href="#skills"
+              class="menu__link js--scroll-to-skills"
+              >My Skills</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              id="projects"
+              href="#projects"
+              class="menu__link js--scroll-to-projects"
+              >My Projects</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              id="contact"
+              href="#contact"
+              class="menu__link js--scroll-to-contact"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-        <title>Theo Gilardo</title>
-    </head>
-    <body>
-
-        <div class="menu">
-            <input type="checkbox" class="menu__checkbox checkbox" id="navi-toggle">
-            <label for="navi-toggle" class="menu__button">
-                <span class="menu__icon">&nbsp;</span>
-            </label>
-            <div class="menu__background">&nbsp;</div>
-            <nav class="menu__nav" id="menu-nav">
-                <ul class="menu__list">
-                    <li class="menu__item"><a id="about" class="menu__link js--scroll-to-about">About Me</a></li>
-                    <li class="menu__item"><a id="skills" href="#skills" class="menu__link js--scroll-to-skills">My Skills</a></li>
-                    <li class="menu__item"><a id="projects" href="#projects" class="menu__link js--scroll-to-projects">My Projects</a></li>
-                    <li class="menu__item"><a id="contact" href="#contact" class="menu__link js--scroll-to-contact">Contact Me</a></li>
-                </ul>
-            </nav>
+    <header class="header">
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              class="navigation__item--underline js--scroll-to-about"
+              href="#about"
+              >About Me</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              class="navigation__item--underline js--scroll-to-skills"
+              href="#skills"
+              >My skills</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a
+              class="navigation__item--underline js--scroll-to-projects"
+              href="#projects"
+              >my projects</a
+            >
+          </li>
+          <li class="navigation__item navigation__item--contact">
+            <a class="btn btn--white js--scroll-to-contact" href="#contact"
+              >contact me</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="header__box">
+        <div class="header__text-content">
+          <h2>Hello, I am</h2>
+          <h1>Theo Gilardo</h1>
+          <p>Junior Front-end developer</p>
+          <a href="#about" class="btn btn--animation js--scroll-to-about"
+            >Learn More</a
+          >
         </div>
+      </div>
+      <img src="img/theo-3-bw.png" class="header__image" alt="" />
+    </header>
 
-        <header class="header">
-            <nav class="navigation">
-                <ul class="navigation__list">
-                      <li class="navigation__item ">
-                          <a class="navigation__item--underline js--scroll-to-about" href="#about">About Me</a>
-                      </li>
-                      <li class="navigation__item ">
-                          <a class="navigation__item--underline js--scroll-to-skills" href="#skills">My skills</a>
-                      </li>
-                      <li class="navigation__item">
-                          <a class="navigation__item--underline js--scroll-to-projects" href="#projects">my projects</a>
-                      </li>
-                      <li class="navigation__item navigation__item--contact ">
-                          <a class="btn btn--white js--scroll-to-contact" href="#contact">contact me</a>
-                      </li>
-                </ul>
-            </nav>
-                <div class="header__box">
-                    <div class="header__text-content">
-                        <h2>Hello, I am</h2>
-                        <h1>Theo Gilardo</h1>
-                        <p>Junior Front-end developer</p>
-                        <a href="#about" class="btn btn--animation js--scroll-to-about">Learn More</a>
-                    </div>
-                </div>
-                <img src="img/theo-3-bw.png" class="header__image" alt="">
+    <section class="about js--section-about">
+      <h1 class="heading-1">About Me</h1>
+      <div class="about__box js--wp-1">
+        <figure class="about__item">
+          <img class="about__img" src="img/climb.png" alt="" />
+        </figure>
+        <p class="about__text">
+          Originally from Paris, I have a background in Management at Bocconi
+          University and specialized later in Digital Marketing at ESCP Business
+          School. I decided to apply to a coding bootcamp at Le Wagon in
+          Amsterdam to develop my digital know-how. Throughout the bootcamp, I
+          discovered a strong passion for coding and took the decision to direct
+          my career towards coding. I told myself that I had to find a career
+          where I could leverage most of my qualities, I am a creative person
+          with a keen eye for details and design, I love customer experience and
+          solving problems in addition to technologies. Following my bootcamp, I
+          continued to develop my learning in HTML, CSS and Javascript and
+          working on different projects to develop my coding skills. I am
+          actively
+          <strong
+            >looking for a junior position in Front-End Development starting
+            immediately.</strong
+          >
+        </p>
+      </div>
+    </section>
 
-        </header>
+    <section class="skills js--section-skills">
+      <h2 class="heading-1">My Skills</h2>
+      <div class="skills__box">
+        <div class="skills__icons js--wp-2">
+          <div class="skills__icon">
+            <h2 class="skills__icon--text">HTML</h2>
+            <i class="fab fa-html5 skills__icon--img"></i>
+          </div>
+          <div class="skills__icon">
+            <h2 class="skills__icon--text">CSS</h2>
+            <i class="fab fa-css3-alt skills__icon--img"></i>
+          </div>
+          <div class="skills__icon">
+            <h2 class="skills__icon--text">Javascript</h2>
+            <i class="fab fa-js skills__icon--img"></i>
+          </div>
+          <div class="skills__icon">
+            <h2 class="skills__icon--text">Bootstrap</h2>
+            <i class="fab fa-bootstrap skills__icon--img"></i>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="about js--section-about">
-            <h1 class="heading-1">About Me</h1>
-            <div class="about__box js--wp-1">
-                <figure class="about__item">
-                  <img class="about__img" src="img/climb.png" alt="">
-                </figure>
-                <p class="about__text">Originally from Paris, I have a background in Management at Bocconi University and specialized later in Digital Marketing at ESCP Business School. I decided to apply to a coding bootcamp at Le Wagon in Amsterdam to develop my digital know-how. Throughout the bootcamp, I discovered a strong passion for coding and took the decision to direct my career towards coding. I told myself that I had to find a career where I could leverage most of my qualities, I am a creative person with a keen eye for details and design, I love customer experience and solving problems in addition to technologies. Following my bootcamp, I continued to develop my learning in HTML, CSS and Javascript and working on different projects to develop my coding skills. I am actively <strong>looking for a junior position in Front-End Development starting immediately.</strong></p>
-            </div>
-        </section>
+    <section class="work js--section-work">
+      <h2 class="heading-1">My Projects</h2>
+      <div class="work__container js--wp-3">
+        <div class="work__project work__container__highlight">
+          <img class="work__img" src="img/wootch.png" alt="" />
+          <div class="work__info">
+            <h2>Wootch</h2>
+            <p>E-commerce Wood Watch Landing Page</p>
+            <a
+              href="https://theogilardo.github.io/wootch/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project">
+          <img class="work__img" src="img/meal-fnder-vuejs.png" alt="" />
+          <div class="work__info">
+            <h2>Meal Finder V2</h2>
+            <p>
+              Another version of Meal Finder built with Vuejs and Typescript
+            </p>
+            <a
+              href="https://meal-api-vuejs.herokuapp.com/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project">
+          <img class="work__img" src="img/expense-tracker.png" alt="" />
+          <div class="work__info">
+            <h2>Trackr'</h2>
+            <p>Expense Tracker app</p>
+            <a
+              href="https://theogilardo.github.io/expense-tracker/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project">
+          <img class="work__img" src="img/meal-finder.png" alt="" />
+          <div class="work__info">
+            <h2>Meal Finder</h2>
+            <p>App to find recipes with API</p>
+            <a
+              href="https://theogilardo.github.io/meal-finder/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project">
+          <img class="work__img" src="img/weather-app.png" alt="" />
+          <div class="work__info">
+            <h2>Weather App</h2>
+            <p>Get the current weather of different cities thanks to an API!</p>
+            <a
+              href="https://theogilardo.github.io/weather-api/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project">
+          <img class="work__img" src="img/gambling.png" alt="" />
+          <div class="work__info">
+            <h2>Gambling</h2>
+            <p>Cool dice game</p>
+            <a
+              href="https://theogilardo.github.io/-pin_game/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project desktop">
+          <img class="work__img" src="img/speed-type.png" alt="" />
+          <div class="work__info">
+            <h2>Speed Typer</h2>
+            <p>Fun game to learn how to type faster</p>
+            <a
+              href="https://theogilardo.github.io/speed-type-game/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project desktop">
+          <img class="work__img" src="img/memory-card.png" alt="" />
+          <div class="work__info">
+            <h2>Memo</h2>
+            <p>Memory card app</p>
+            <a
+              href="https://theogilardo.github.io/memory-card/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project">
+          <img class="work__img" src="img/instagram.png" alt="" />
+          <div class="work__info">
+            <h2>Insta Copy</h2>
+            <p>Remade my Instagram profile with pure HMTL & CSS</p>
+            <a
+              href="https://theogilardo.github.io/instagram-copy/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project desktop">
+          <img class="work__img" src="img/meditation.png" alt="" />
+          <div class="work__info">
+            <h2>Meditation App</h2>
+            <p>App to relax with ambien music</p>
+            <a
+              href="https://theogilardo.github.io/meditation-app/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project desktop">
+          <img class="work__img" src="img/vaycar.jpg" alt="" />
+          <div class="work__info">
+            <h2>Vaycar</h2>
+            <p>Web App made @Le Wagon</p>
+            <a
+              href="https://vaycar.herokuapp.com/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="work__project desktop">
+          <img class="work__img" src="img/beta.png" alt="" />
+          <div class="work__info">
+            <h2>Beta Vision</h2>
+            <p>Web App made @Le Wagon</p>
+            <a
+              href="http://betavision.rocks/"
+              target="_blank"
+              class="btn btn--white"
+              >Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-       <section class="skills js--section-skills">
-           <h2 class="heading-1"> My Skills</h2>
-           <div class="skills__box">
-                <div class="skills__icons js--wp-2">
-                    <div class="skills__icon">
-                        <h2 class="skills__icon--text">HTML</h2>
-                        <i class="fab fa-html5 skills__icon--img" ></i>
-                    </div>
-                    <div class="skills__icon">
-                        <h2 class="skills__icon--text">CSS</h2>
-                        <i class="fab fa-css3-alt skills__icon--img" ></i>
-                    </div>
-                    <div class="skills__icon">
-                        <h2 class="skills__icon--text">Javascript</h2>
-                        <i class="fab fa-js skills__icon--img" ></i>
-                    </div>
-                    <div class="skills__icon">
-                        <h2 class="skills__icon--text">Bootstrap</h2>
-                        <i class="fab fa-bootstrap skills__icon--img" ></i>
-                    </div>
-                </div>
-            </div>
-       </section>
+    <section class="contact js--section-contact">
+      <h1 class="heading-1">Let's talk !</h1>
+      <div class="contact__box js--wp-4">
+        <figure class="contact__item">
+          <img class="contact__img" src="img/contact.png" alt="" />
+        </figure>
 
-        <section class="work js--section-work">
-            <h2 class="heading-1">My Projects</h2>
-            <div class="work__container js--wp-3">
-               <div class="work__project work__container__highlight">
-                   <img class="work__img" src="img/wootch.png" alt="">
-                   <div class="work__info">
-                     <h2>Wootch</h2>
-                     <p>E-commerce Wood Watch Landing Page</p>
-                     <a href="https://theogilardo.github.io/wootch/" target="_blank" class="btn btn--white">Demo</a>
-                   </div>
-               </div>
-                <div class="work__project">
-                    <img class="work__img" src="img/gambling.png" alt="">
-                    <div class="work__info">
-                      <h2>Gambling</h2>
-                      <p>Cool dice game</p>
-                      <a href="https://theogilardo.github.io/-pin_game/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project">
-                    <img class="work__img" src="img/expense-tracker.png" alt="">
-                    <div class="work__info">
-                      <h2>Trackr'</h2>
-                      <p>Expense Tracker app</p>
-                      <a href="https://theogilardo.github.io/expense-tracker/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project">
-                    <img class="work__img" src="img/meal-finder.png" alt="">
-                    <div class="work__info">
-                      <h2>Meal Finder</h2>
-                      <p>App to find recipes with API</p>
-                      <a href="https://theogilardo.github.io/meal-finder/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project">
-                    <img class="work__img" src="img/weather-app.png" alt="">
-                    <div class="work__info">
-                      <h2>Weather App</h2>
-                      <p>Get the current weather of different cities thanks to an API!</p>
-                      <a href="https://theogilardo.github.io/weather-api/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project desktop">
-                    <img class="work__img" src="img/speed-type.png" alt="">
-                    <div class="work__info">
-                      <h2>Speed Typer</h2>
-                      <p>Fun game to learn how to type faster</p>
-                      <a href="https://theogilardo.github.io/speed-type-game/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project desktop">
-                    <img class="work__img" src="img/memory-card.png" alt="">
-                    <div class="work__info">
-                      <h2>Memo</h2>
-                      <p>Memory card app</p>
-                      <a href="https://theogilardo.github.io/memory-card/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project">
-                    <img class="work__img" src="img/instagram.png" alt="">
-                    <div class="work__info">
-                      <h2>Insta Copy</h2>
-                      <p>Remade my Instagram profile with pure HMTL & CSS</p>
-                      <a href="https://theogilardo.github.io/instagram-copy/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project desktop">
-                    <img class="work__img" src="img/meditation.png" alt="">
-                    <div class="work__info">
-                      <h2>Meditation App</h2>
-                      <p>App to relax with ambien music</p>
-                      <a href="https://theogilardo.github.io/meditation-app/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project">
-                    <img class="work__img" src="img/todolist.png" alt="">
-                    <div class="work__info">
-                      <h2>To Do List</h2>
-                      <p>To Do List to keep track of what to do</p>
-                      <a href="https://theogilardo.github.io/to-do-list/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
+        <div class="contact__info">
+          <i class="fas fa-envelope-open-text contact__info__icon--email"></i>
+          <p class="contact__info__text--email">gilardotheo@gmail.com</p>
+          <i class="fas fa-phone-alt contact__info__icon--phone"></i>
+          <p class="contact__info__text--phone">+33 771252533</p>
+          <a href="img/cv.docx" download
+            ><i
+              class="fas fa-arrow-circle-down contact__info__icon--download"
+            ></i
+          ></a>
 
-                <div class="work__project desktop">
-                    <img class="work__img" src="img/vaycar.jpg" alt="">
-                    <div class="work__info">
-                        <h2>Vaycar</h2>
-                        <p>Web App made @Le Wagon</p>
-                        <a href="https://vaycar.herokuapp.com/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-                <div class="work__project desktop">
-                    <img class="work__img" src="img/beta.png" alt="">
-                    <div class="work__info">
-                        <h2>Beta Vision</h2>
-                        <p>Web App made @Le Wagon</p>
-                        <a href="http://betavision.rocks/" target="_blank" class="btn btn--white">Demo</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <p class="contact__info__text--download">Download my CV</p>
+        </div>
+      </div>
+    </section>
 
-        <section class="contact js--section-contact">
-            <h1 class="heading-1">Let's talk !</h1>
-            <div class="contact__box js--wp-4">
-                <figure class="contact__item">
-                    <img class="contact__img" src="img/contact.png" alt="">
-                </figure>
+    <footer class="footer">
+      <p class="footer__text">Made with ❤️ by Théo Gilardo</p>
+      <div class="footer__social-networks">
+        <a
+          class="footer__link"
+          href="https://www.instagram.com/theogilardo/"
+          target="_blank"
+        >
+          <i class="fab fa-instagram footer__icon"></i>
+        </a>
+        <a
+          class="footer__link"
+          href="https://www.linkedin.com/in/theogilardo/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin footer__icon"></i>
+        </a>
+        <a
+          class="footer__link"
+          href="https://github.com/theogilardo"
+          target="_blank"
+        >
+          <i class="fab fa-github footer__icon"></i>
+          <ion-icon class="footer__icon" name="logo-github"></ion-icon>
+        </a>
+      </div>
+    </footer>
 
-                  <div class="contact__info">
-                      <i class="fas fa-envelope-open-text contact__info__icon--email" ></i>
-                      <p class="contact__info__text--email">gilardotheo@gmail.com</p>
-                      <i class="fas fa-phone-alt contact__info__icon--phone" ></i>
-                      <p class="contact__info__text--phone">+33 771252533</p>
-                      <a href="img/cv.docx" download><i class="fas fa-arrow-circle-down contact__info__icon--download"></i></a>
-
-                      <p class="contact__info__text--download">Download my CV</p>
-                  </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p class="footer__text">Made with ❤️ by Théo Gilardo</p>
-            <div class="footer__social-networks">
-                <a class="footer__link" href="https://www.instagram.com/theogilardo/"target="_blank">
-                    <i class="fab fa-instagram footer__icon" ></i>
-                </a>
-                <a class="footer__link" href="https://www.linkedin.com/in/theogilardo/"target="_blank">
-                    <i class="fab fa-linkedin footer__icon" ></i>
-                </a>
-                <a class="footer__link" href="https://github.com/theogilardo"target="_blank">
-                    <i class="fab fa-github footer__icon" ></i>
-                    <ion-icon class="footer__icon" name="logo-github"></ion-icon>
-                </a>
-            </div>
-        </footer>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="vendors/jquery.waypoints.min.js"></script>
-        <script src="js/script.js"></script>
-
-    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="vendors/jquery.waypoints.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
