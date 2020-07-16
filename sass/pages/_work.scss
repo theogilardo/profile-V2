@@ -1,158 +1,150 @@
-
 .work {
-    padding: 4rem 0 7.5rem 0;
-    margin-top: -1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+  padding: 4rem 0 7.5rem 0;
+  margin-top: -1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 
-    &::after {
-        content: "";
-        background-color: $color-layout;
-        position: absolute;
-        clip-path: polygon(50% 0%, 100% 0, 100% 0, 0 38%, 0 0);
-        height: 100%;
-        width: 100%;
-        top: 0;
-        right: 0;
-        z-index: -1;
-    }
+  &::after {
+    content: "";
+    background-color: $color-layout;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 0, 100% 0, 0 38%, 0 0);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
 
-    h2 {
-      margin-bottom: 1rem;
-    }
+  h2 {
+    margin-bottom: 1rem;
+  }
 
-    &__container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-row: 1fr;
-      margin-top: 7rem;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 7rem;
 
-      @include respond(phone) {
-          grid-template-columns: repeat(2, 1fr);
-      }
-
-      &__highlight {
-        @include respond(phone) {
-          grid-column: 1 / 3;
-        }
-
-        @include respond(small-phone) {
-          grid-column: 1 / 2;
-        }
-      }
-
-
-
-      @include respond(small-phone) {
-          grid-template-columns: 1fr;
-      }
-    }
-
-    &__project {
-      position: relative;
-      text-align: center;
-      height: 30rem;
-
-      p {
-        font-size: 1.4rem;
-        flex-basis: 60%;
-        padding: 0 4rem;
-      }
-
-      a {
-        margin-bottom: 2.5rem;
-        padding: 1.5rem 5rem;
-        font-weight: 600;
-
-      }
-
-      &:hover div {
-        opacity: .8;
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background-color: #33333399;
-
-      }
-    }
-
-    &__img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &__name {
-      position: absolute;
-      z-index: 10;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2.4rem;
-      letter-spacing: 1px;
-      color: #eee;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    &__info {
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-direction: column;
-      font-size: 2.4rem;
-      letter-spacing: 1px;
-      color: $color-grey-light-1;
-      background-color: $color-primary;
-      font-weight: 600;
-      text-transform: uppercase;
-      opacity: 0;
-      padding: 1.5em;
-      transition: opacity .3s ease-in;
-
-      @include respond(small-phone) {
-          opacity: 1;
-          background-color: transparent;
-      }
-
-      @include respond(phone) {
-          opacity: 1;
-          background-color: transparent;
-      }
-
-      @include respond(big-phone) {
-          opacity: 1;
-          background-color: transparent;
-      }
-
-      @include respond(tab-port) {
-          opacity: 1;
-          background-color: transparent;
-      }
-
-    }
-}
-
-.desktop {
     @include respond(phone) {
-      display: none;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__highlight {
+      @include respond(phone) {
+        grid-column: 1 / 3;
+      }
+
+      @include respond(small-phone) {
+        grid-column: 1 / 2;
+      }
+    }
+
+    @include respond(small-phone) {
+      grid-template-columns: 1fr;
     }
   }
 
+  &__project {
+    position: relative;
+    text-align: center;
+    height: 30rem;
 
+    p {
+      font-size: 1.4rem;
+      flex-basis: 60%;
+      padding: 0 4rem;
+    }
+
+    a {
+      margin-bottom: 2.5rem;
+      padding: 1.5rem 5rem;
+      font-weight: 600;
+    }
+
+    &:hover div {
+      opacity: 0.8;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #33333399;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    color: #eee;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    color: $color-grey-light-1;
+    background-color: $color-primary;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+    padding: 1.5em;
+    transition: opacity 0.3s ease-in;
+
+    @include respond(small-phone) {
+      opacity: 1;
+      background-color: transparent;
+    }
+
+    @include respond(phone) {
+      opacity: 1;
+      background-color: transparent;
+    }
+
+    @include respond(big-phone) {
+      opacity: 1;
+      background-color: transparent;
+    }
+
+    @include respond(tab-port) {
+      opacity: 1;
+      background-color: transparent;
+    }
+  }
+}
+
+.desktop {
+  @include respond(phone) {
+    display: none;
+  }
+}
