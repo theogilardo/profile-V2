@@ -12,12 +12,12 @@
     position: absolute;
     background-color: $color-layout;
     clip-path: polygon(0 0, 100% 0, 22% 28%, 100% 100%, 0 100%);
-
     height: 100%;
     width: 100%;
     top: 0;
     right: 0;
     z-index: -1;
+    margin-top: -0.1rem;
   }
 
   &__header {
